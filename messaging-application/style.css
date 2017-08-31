@@ -1,0 +1,192 @@
+ /* CSS Document */
+body {
+	margin:0;
+	height:100%;
+	font:100% arial;
+	color: #222;
+	text-align:center;
+	}
+ 
+form, p, span {
+	margin:0;
+	padding:0; }
+ 
+a {
+	color:#CC027B;
+	text-decoration:underline; }
+ 
+a:hover { 
+	color:#600137; }
+
+/* values that are used by both the header and footer. */
+#header, #footer {
+	width: 100%;
+	min-width: 550px;
+	position: absolute;
+	left: 0px;
+	color: #222;
+	background-color: #d8d8d8;
+}
+
+#header {
+	height: 50px;
+	top:0px;
+}
+
+#footer {
+	height:34px;
+	padding-top:8px;
+	padding-bottom:8px;
+	bottom:0px;
+	display: block;
+}
+
+/* shows the footer if the window taller than 750 pixels. */
+@media screen and (max-height:750px) {
+	#footer {
+		display:none;
+	}
+}
+
+#settings, #contacts {
+	position:absolute;
+	height:165px;
+	width:250px;
+	background:#fff;
+	border:1px solid;
+	top:60px;
+	right:10px;
+	display:none;
+}
+
+#settings {
+	height:165px;
+	width:250px;
+}
+
+#contacts {
+	height:400px;
+	width:250px;
+	overflow:auto;
+}
+
+/* it's called "loginform" but is also used for admin/mentor panel and a bunch of other stuff (was originally called "wrapper" which in retrospect would have been a more suitable name) */
+#loginform  {
+	margin:0 auto;
+	padding-left:2%;
+	padding-right:2%;
+	padding-top:18px;
+	padding-bottom:25px;
+	background:#E9E9E9;
+	width:95%;
+	min-width:550px;
+	max-width:800px;
+	border:1px solid #B9B9B9;
+	border-radius:25px;
+}
+
+/* the wrapper for the main page content. */
+#box-wrapper {
+	height:calc(100% - 60px);
+	min-width:550px;
+	padding:5px;
+	padding-top:55px;
+}
+
+/* values used by both the inbox and message divs. */
+#inbox, #message {
+	text-align:left;
+	background:#fff;
+	height:calc(100% - 50px);
+	width:49%;
+	border:1px solid #B9B9B9;
+	overflow:auto;
+	}
+
+/* adjusts the height of the inbox and message divs when the footer is present. */
+@media screen and (max-height:750px) {
+	#inbox, #message {
+		height:100%;
+	}
+}
+	
+#inbox {
+	float:left;
+}
+#message {
+	float:right;
+}
+
+/* admin panel divs */
+#users, #view-usermsg, #view-fullmsg {
+	text-align:left;
+	margin:0 auto;
+	margin-bottom:1%;
+	padding:1%;
+	background:#fff;
+	height: 400px;
+	border:1px solid #B9B9B9;
+	overflow:auto; }
+}
+
+#users {
+	width:90%;
+}
+
+#view-usermsg, #view-fullmsg {
+	width:45%
+}
+
+/* tables for the "view users" div in admin panel */
+#user-table {
+	margin:5px auto;
+}
+
+#usertable-toprow {
+	background-color:#b8b8b8;
+	padding:2px;
+}
+
+#usertable-datarow {
+	background-color:#d8d8d8;
+	font-size:90%;
+	padding:2px;
+}
+
+.logo {
+	display:none;
+	float:left;
+	padding-left:2%;
+	padding-top:6px;
+	width: 300px;
+	height: 37px;
+}
+
+/* displays the logo if the window is wider than 750 pixels. */
+@media screen and (min-width:850px) {
+	.logo {
+		display:block;
+	}
+}
+
+/* header */
+.welcome {
+	float:right;
+	padding-right:2%;
+	padding-top: 6px;
+}
+ 
+ /* messages as seen in inbox, sent items etc. */
+.msgln, .msgln-u, .contacts { 
+	border:1px solid #AAA;
+	margin:4px;
+	padding:5px; }
+
+.msgln:hover, .contacts:hover, .msgln-u:hover { 
+	background-color:#e8e8e8;
+}
+
+/* unread messages show in a different colour */
+.msgln-u {
+	background-color:#e0e0ff;
+}
