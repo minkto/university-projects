@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+    	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+		<title>Chemistry Molecule Simulator</title>
+		<script type="text/javascript" src="three.min.js"></script>
+		<script type="text/javascript" src="stats.min.js"></script>
+		<script type="text/javascript" src="ColladaLoader.js"></script>
+		<script type="text/javascript" src="FlyControls.js"></script>
+		<script type="text/javascript" src="myJavaScriptFile.js"></script>
+		<script src="Animation.js"></script>
+		<script src="AnimationHandler.js"></script>
+		<script src="KeyFrameAnimation.js"></script>
+	</head>
+	
+	<body bgcolor="white">
+		
+		<div id="myDivContainer" style="position: absolute; top: 10px; left: 10px; border: 1px solid black;">
+	
+		</div>
+		
+			 	
+		<div id="section1" style="position: absolute; top: 50px; left: 800px; padding:20px;">
+		<h1>Chemistry - Molecule Simulator</h1>
+			<p>Welcome to a simulator made to model different molecules that exist. <br>Use the mouse and WASD keys to move and rotate around the molecule.</p>
+			
+			<table>			
+				<tr> 
+					<td> <img src = "gas_icon.jpg"> </td> 
+					<td> <img src = "solid_icon.jpg"> </td>  
+					<td> <img src = "liquid_icon.jpg"> </td>
+					<td> <img src = "methane_icon.jpg"> </td> 
+					<td> <img src = "ethane_icon.jpg"> </td>  			
+				</tr>
+				<tr style = "text-align:center;"> 
+					<td> <button onclick = "initScene('gas_particles.dae','Gas')">Gas</button> </td> 
+					<td> <button onclick = "initScene('solid_particles.dae','Solid')">Solid</button> </td>
+					<td> <button onclick = "initScene('liquid_particles.dae','Liquid')">Liquid</button> </td>
+					<td> <button onclick = "initScene('methane.dae','Methane')">Methane</button> </td>
+					<td> <button onclick = "initScene('ethane.dae','Ethane')">Ethane</button></td>			
+				</tr>
+			</table>
+			<button onclick = "removeObject()">Remove Molecules</button> 
+
+			
+		</div>
+		
+		
+		<div id="section2" style="position: absolute; top: 400px; left: 800px; padding:20px;">
+			<h2>Description</h2>
+			<p id ="desc"> Hi there, if you click an option then some relevent description will appear here.</p>
+		</div>
+
+				
+	</body>
+</html>
